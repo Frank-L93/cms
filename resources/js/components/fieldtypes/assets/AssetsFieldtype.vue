@@ -242,6 +242,7 @@ export default {
          * The initial container to be displayed in the selector.
          */
         container() {
+            console.log(this.meta);
             return this.meta.container;
         },
 
@@ -397,6 +398,8 @@ export default {
         },
 
         canUpload() {
+            console.log(this.config);
+            console.log(this.container);
             if (!this.config.allow_uploads) return false;
 
             if (!this.container.can_upload) return false;
